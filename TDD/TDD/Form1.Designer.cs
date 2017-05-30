@@ -32,16 +32,23 @@
             this.currentBox = new System.Windows.Forms.TextBox();
             this.current_label = new System.Windows.Forms.Label();
             this.successLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.readButton = new System.Windows.Forms.Button();
+            this.unitsList = new System.Windows.Forms.ListBox();
+            this.readList = new System.Windows.Forms.ListBox();
+            this.trackBar = new System.Windows.Forms.TrackBar();
+            this.currentLablel = new System.Windows.Forms.Label();
+            this.sensorList = new System.Windows.Forms.ListBox();
+            this.sensorLabel = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.dropButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // currentButton
             // 
-            this.currentButton.Location = new System.Drawing.Point(12, 40);
+            this.currentButton.Location = new System.Drawing.Point(7, 87);
             this.currentButton.Name = "currentButton";
-            this.currentButton.Size = new System.Drawing.Size(101, 23);
+            this.currentButton.Size = new System.Drawing.Size(107, 23);
             this.currentButton.TabIndex = 0;
             this.currentButton.Text = "Задать ток";
             this.currentButton.UseVisualStyleBackColor = true;
@@ -49,15 +56,15 @@
             // 
             // currentBox
             // 
-            this.currentBox.Location = new System.Drawing.Point(13, 14);
+            this.currentBox.Location = new System.Drawing.Point(6, 57);
             this.currentBox.Name = "currentBox";
-            this.currentBox.Size = new System.Drawing.Size(72, 20);
+            this.currentBox.Size = new System.Drawing.Size(78, 20);
             this.currentBox.TabIndex = 1;
             // 
             // current_label
             // 
             this.current_label.AutoSize = true;
-            this.current_label.Location = new System.Drawing.Point(91, 17);
+            this.current_label.Location = new System.Drawing.Point(92, 60);
             this.current_label.Name = "current_label";
             this.current_label.Size = new System.Drawing.Size(22, 13);
             this.current_label.TabIndex = 2;
@@ -66,48 +73,119 @@
             // successLabel
             // 
             this.successLabel.AutoSize = true;
-            this.successLabel.Location = new System.Drawing.Point(12, 91);
+            this.successLabel.Location = new System.Drawing.Point(10, 292);
             this.successLabel.Name = "successLabel";
             this.successLabel.Size = new System.Drawing.Size(74, 13);
             this.successLabel.TabIndex = 3;
             this.successLabel.Text = "Ток не задан";
             // 
-            // label1
+            // readButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Ток не задан";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.readButton.Location = new System.Drawing.Point(120, 74);
+            this.readButton.Name = "readButton";
+            this.readButton.Size = new System.Drawing.Size(476, 36);
+            this.readButton.TabIndex = 4;
+            this.readButton.Text = "Считать значения";
+            this.readButton.UseVisualStyleBackColor = true;
+            this.readButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // unitsList
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.unitsList.FormattingEnabled = true;
+            this.unitsList.Items.AddRange(new object[] {
+            "мм.рт.ст.",
+            "МПа",
+            "кПа",
+            "кгс/кв.см"});
+            this.unitsList.Location = new System.Drawing.Point(119, 12);
+            this.unitsList.Name = "unitsList";
+            this.unitsList.Size = new System.Drawing.Size(184, 56);
+            this.unitsList.TabIndex = 8;
+            this.unitsList.SelectedIndexChanged += new System.EventHandler(this.unitsList_SelectedIndexChanged);
             // 
-            // button1
+            // readList
             // 
-            this.button1.Location = new System.Drawing.Point(139, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Задать ток";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.readList.FormattingEnabled = true;
+            this.readList.Items.AddRange(new object[] {
+            "I=",
+            "P=",
+            "Pmin=",
+            "Pmax="});
+            this.readList.Location = new System.Drawing.Point(309, 12);
+            this.readList.Name = "readList";
+            this.readList.Size = new System.Drawing.Size(287, 56);
+            this.readList.TabIndex = 10;
+            // 
+            // trackBar
+            // 
+            this.trackBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBar.Location = new System.Drawing.Point(12, 116);
+            this.trackBar.Maximum = 30;
+            this.trackBar.Name = "trackBar";
+            this.trackBar.Size = new System.Drawing.Size(583, 45);
+            this.trackBar.TabIndex = 11;
+            this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
+            // 
+            // currentLablel
+            // 
+            this.currentLablel.Location = new System.Drawing.Point(4, 9);
+            this.currentLablel.Name = "currentLablel";
+            this.currentLablel.Size = new System.Drawing.Size(109, 45);
+            this.currentLablel.TabIndex = 12;
+            this.currentLablel.Text = "Задайте значение тока числом или ползунком";
+            // 
+            // sensorList
+            // 
+            this.sensorList.FormattingEnabled = true;
+            this.sensorList.Location = new System.Drawing.Point(13, 157);
+            this.sensorList.Name = "sensorList";
+            this.sensorList.Size = new System.Drawing.Size(101, 69);
+            this.sensorList.TabIndex = 13;
+            this.sensorList.Tag = "";
+            this.sensorList.SelectedIndexChanged += new System.EventHandler(this.sensorList_SelectedIndexChanged);
+            // 
+            // sensorLabel
+            // 
+            this.sensorLabel.AutoSize = true;
+            this.sensorLabel.Location = new System.Drawing.Point(12, 317);
+            this.sensorLabel.Name = "sensorLabel";
+            this.sensorLabel.Size = new System.Drawing.Size(0, 13);
+            this.sensorLabel.TabIndex = 14;
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(12, 232);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(102, 23);
+            this.addButton.TabIndex = 15;
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // dropButton
+            // 
+            this.dropButton.Location = new System.Drawing.Point(12, 262);
+            this.dropButton.Name = "dropButton";
+            this.dropButton.Size = new System.Drawing.Size(102, 23);
+            this.dropButton.TabIndex = 16;
+            this.dropButton.Text = "Удалить";
+            this.dropButton.UseVisualStyleBackColor = true;
+            this.dropButton.Click += new System.EventHandler(this.dropButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 339);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dropButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.sensorLabel);
+            this.Controls.Add(this.sensorList);
+            this.Controls.Add(this.currentLablel);
+            this.Controls.Add(this.trackBar);
+            this.Controls.Add(this.readList);
+            this.Controls.Add(this.unitsList);
+            this.Controls.Add(this.readButton);
             this.Controls.Add(this.successLabel);
             this.Controls.Add(this.current_label);
             this.Controls.Add(this.currentBox);
@@ -115,6 +193,7 @@
             this.Name = "Form1";
             this.Text = "Токовый датчик давления";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,9 +205,15 @@
         private System.Windows.Forms.TextBox currentBox;
         private System.Windows.Forms.Label current_label;
         private System.Windows.Forms.Label successLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button readButton;
+        private System.Windows.Forms.ListBox unitsList;
+        private System.Windows.Forms.ListBox readList;
+        private System.Windows.Forms.TrackBar trackBar;
+        private System.Windows.Forms.Label currentLablel;
+        private System.Windows.Forms.ListBox sensorList;
+        private System.Windows.Forms.Label sensorLabel;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button dropButton;
     }
 }
 
