@@ -32,7 +32,6 @@
             this.currentBox = new System.Windows.Forms.TextBox();
             this.current_label = new System.Windows.Forms.Label();
             this.successLabel = new System.Windows.Forms.Label();
-            this.readButton = new System.Windows.Forms.Button();
             this.unitsList = new System.Windows.Forms.ListBox();
             this.readList = new System.Windows.Forms.ListBox();
             this.trackBar = new System.Windows.Forms.TrackBar();
@@ -41,7 +40,21 @@
             this.sensorLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.dropButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mul = new System.Windows.Forms.TextBox();
+            this.multButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.mul2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // currentButton
@@ -73,21 +86,11 @@
             // successLabel
             // 
             this.successLabel.AutoSize = true;
-            this.successLabel.Location = new System.Drawing.Point(10, 292);
+            this.successLabel.Location = new System.Drawing.Point(5, 246);
             this.successLabel.Name = "successLabel";
             this.successLabel.Size = new System.Drawing.Size(74, 13);
             this.successLabel.TabIndex = 3;
             this.successLabel.Text = "Ток не задан";
-            // 
-            // readButton
-            // 
-            this.readButton.Location = new System.Drawing.Point(120, 74);
-            this.readButton.Name = "readButton";
-            this.readButton.Size = new System.Drawing.Size(476, 36);
-            this.readButton.TabIndex = 4;
-            this.readButton.Text = "Считать значения";
-            this.readButton.UseVisualStyleBackColor = true;
-            this.readButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // unitsList
             // 
@@ -119,10 +122,10 @@
             // trackBar
             // 
             this.trackBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trackBar.Location = new System.Drawing.Point(12, 116);
+            this.trackBar.Location = new System.Drawing.Point(121, 74);
             this.trackBar.Maximum = 30;
             this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(583, 45);
+            this.trackBar.Size = new System.Drawing.Size(475, 45);
             this.trackBar.TabIndex = 11;
             this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
             // 
@@ -137,7 +140,7 @@
             // sensorList
             // 
             this.sensorList.FormattingEnabled = true;
-            this.sensorList.Location = new System.Drawing.Point(13, 157);
+            this.sensorList.Location = new System.Drawing.Point(8, 116);
             this.sensorList.Name = "sensorList";
             this.sensorList.Size = new System.Drawing.Size(101, 69);
             this.sensorList.TabIndex = 13;
@@ -147,14 +150,14 @@
             // sensorLabel
             // 
             this.sensorLabel.AutoSize = true;
-            this.sensorLabel.Location = new System.Drawing.Point(12, 317);
+            this.sensorLabel.Location = new System.Drawing.Point(5, 357);
             this.sensorLabel.Name = "sensorLabel";
             this.sensorLabel.Size = new System.Drawing.Size(0, 13);
             this.sensorLabel.TabIndex = 14;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 232);
+            this.addButton.Location = new System.Drawing.Point(7, 191);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(102, 23);
             this.addButton.TabIndex = 15;
@@ -164,7 +167,7 @@
             // 
             // dropButton
             // 
-            this.dropButton.Location = new System.Drawing.Point(12, 262);
+            this.dropButton.Location = new System.Drawing.Point(6, 220);
             this.dropButton.Name = "dropButton";
             this.dropButton.Size = new System.Drawing.Size(102, 23);
             this.dropButton.TabIndex = 16;
@@ -172,11 +175,133 @@
             this.dropButton.UseVisualStyleBackColor = true;
             this.dropButton.Click += new System.EventHandler(this.dropButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(4, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "сравнить 1 и 2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 291);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "1 Сенсор";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "2 Сенсор";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 291);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "^";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.mul2);
+            this.groupBox1.Controls.Add(this.multButton);
+            this.groupBox1.Controls.Add(this.mul);
+            this.groupBox1.Controls.Add(this.PictureBox1);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Location = new System.Drawing.Point(144, 125);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(452, 257);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Графики";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Sin график",
+            "П_П_П график"});
+            this.listBox1.Location = new System.Drawing.Point(6, 19);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(86, 30);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Location = new System.Drawing.Point(98, 19);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(348, 235);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 1;
+            this.PictureBox1.TabStop = false;
+            // 
+            // mul
+            // 
+            this.mul.Location = new System.Drawing.Point(8, 55);
+            this.mul.Name = "mul";
+            this.mul.Size = new System.Drawing.Size(85, 20);
+            this.mul.TabIndex = 2;
+            // 
+            // multButton
+            // 
+            this.multButton.Location = new System.Drawing.Point(8, 81);
+            this.multButton.Name = "multButton";
+            this.multButton.Size = new System.Drawing.Size(86, 35);
+            this.multButton.TabIndex = 3;
+            this.multButton.Text = "Умножить функцию";
+            this.multButton.UseVisualStyleBackColor = true;
+            this.multButton.Click += new System.EventHandler(this.multButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 192);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 35);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Масштаб";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // mul2
+            // 
+            this.mul2.Location = new System.Drawing.Point(7, 166);
+            this.mul2.Name = "mul2";
+            this.mul2.Size = new System.Drawing.Size(85, 20);
+            this.mul2.TabIndex = 22;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(4, 317);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 35);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "обновить графики";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 339);
+            this.ClientSize = new System.Drawing.Size(608, 379);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dropButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.sensorLabel);
@@ -185,15 +310,18 @@
             this.Controls.Add(this.trackBar);
             this.Controls.Add(this.readList);
             this.Controls.Add(this.unitsList);
-            this.Controls.Add(this.readButton);
             this.Controls.Add(this.successLabel);
             this.Controls.Add(this.current_label);
             this.Controls.Add(this.currentBox);
             this.Controls.Add(this.currentButton);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Токовый датчик давления";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +333,6 @@
         private System.Windows.Forms.TextBox currentBox;
         private System.Windows.Forms.Label current_label;
         private System.Windows.Forms.Label successLabel;
-        private System.Windows.Forms.Button readButton;
         private System.Windows.Forms.ListBox unitsList;
         private System.Windows.Forms.ListBox readList;
         private System.Windows.Forms.TrackBar trackBar;
@@ -214,6 +341,18 @@
         private System.Windows.Forms.Label sensorLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button dropButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.PictureBox PictureBox1;
+        private System.Windows.Forms.Button multButton;
+        private System.Windows.Forms.TextBox mul;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox mul2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
