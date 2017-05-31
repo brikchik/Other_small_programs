@@ -81,8 +81,8 @@ namespace TDD
         }
         private void currentButton_Click(object sender, EventArgs e)
         {
-            if (!press.set_current(currentBox.Text))successLabel.Text="Ошибка!";
-            else successLabel.Text = "Ток успешно задан";
+            if (!press.set_current(currentBox.Text)) Status_label.Text="Ошибка!";
+            else Status_label.Text = "Ток успешно задан";
             trackBar.Value = (int)press.get_current();
             readValues();
         }
@@ -122,23 +122,26 @@ namespace TDD
         private void trackBar_Scroll(object sender, EventArgs e)
         {
             press.set_current(trackBar.Value);
-            successLabel.Text = "Ток задан";
+            Status_label.Text = "Ток задан";
             readValues();
+            do_paint();
         }
 
         private void unitsList_SelectedIndexChanged(object sender, EventArgs e)
         {
             press.set_units((byte)unitsList.SelectedIndex);
-            successLabel.Text = "Единицы измерения заданы";
+            Status_label.Text = "Единицы измерения заданы";
             readValues();
+            do_paint();
         }
 
         private void sensorList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!(sensorList.SelectedIndex > sensorList.Items.Count - 1) && sensorList.SelectedIndex>=0)
             {
-                press = sensors[sensors.Count-1];
-                sensorLabel.Text = "Работаем с датчиком " + sensorList.SelectedItem;
+                press = sensors[sensorList.SelectedIndex];
+                StatusLabel2.Text = "Работаем с датчиком " + sensorList.SelectedItem;
+                trackBar.Value = (int)press.get_current();
                 readValues();
                 do_paint();
             }
@@ -150,7 +153,8 @@ namespace TDD
                 sensorList.Items.Add("Сенсор " + (sensorList.Items.Count + 1));
             sensorList.SelectedIndex = sensorList.Items.Count-1;
             press = sensors[sensorList.SelectedIndex];
-            sensorLabel.Text = "Работаем с датчиком " + sensorList.SelectedItem;
+            StatusLabel2.Text = "Работаем с датчиком " + sensorList.SelectedItem;
+            do_paint();
         }
 
         private void dropButton_Click(object sender, EventArgs e)
@@ -162,6 +166,7 @@ namespace TDD
                 if (k != 0) press = sensors[k - 1]; else press = sensors[0];
                 sensorList.Items.RemoveAt(k);
                 sensorList.SelectedIndex = 0;
+                do_paint();
             }
         }
 

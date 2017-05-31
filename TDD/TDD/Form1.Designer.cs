@@ -31,7 +31,6 @@
             this.currentButton = new System.Windows.Forms.Button();
             this.currentBox = new System.Windows.Forms.TextBox();
             this.current_label = new System.Windows.Forms.Label();
-            this.successLabel = new System.Windows.Forms.Label();
             this.unitsList = new System.Windows.Forms.ListBox();
             this.readList = new System.Windows.Forms.ListBox();
             this.trackBar = new System.Windows.Forms.TrackBar();
@@ -45,16 +44,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mul = new System.Windows.Forms.TextBox();
-            this.multButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.mul2 = new System.Windows.Forms.TextBox();
+            this.multButton = new System.Windows.Forms.Button();
+            this.mul = new System.Windows.Forms.TextBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.Status_label = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // currentButton
@@ -73,6 +76,7 @@
             this.currentBox.Name = "currentBox";
             this.currentBox.Size = new System.Drawing.Size(78, 20);
             this.currentBox.TabIndex = 1;
+            this.currentBox.Text = "4";
             // 
             // current_label
             // 
@@ -82,15 +86,6 @@
             this.current_label.Size = new System.Drawing.Size(22, 13);
             this.current_label.TabIndex = 2;
             this.current_label.Text = "мА";
-            // 
-            // successLabel
-            // 
-            this.successLabel.AutoSize = true;
-            this.successLabel.Location = new System.Drawing.Point(5, 246);
-            this.successLabel.Name = "successLabel";
-            this.successLabel.Size = new System.Drawing.Size(74, 13);
-            this.successLabel.TabIndex = 3;
-            this.successLabel.Text = "Ток не задан";
             // 
             // unitsList
             // 
@@ -177,9 +172,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(4, 265);
+            this.button1.Location = new System.Drawing.Point(4, 249);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.Size = new System.Drawing.Size(132, 39);
             this.button1.TabIndex = 17;
             this.button1.Text = "сравнить 1 и 2";
             this.button1.UseVisualStyleBackColor = true;
@@ -227,44 +222,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Графики";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Sin график",
-            "П_П_П график"});
-            this.listBox1.Location = new System.Drawing.Point(6, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(86, 30);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Location = new System.Drawing.Point(98, 19);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(348, 235);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 1;
-            this.PictureBox1.TabStop = false;
-            // 
-            // mul
-            // 
-            this.mul.Location = new System.Drawing.Point(8, 55);
-            this.mul.Name = "mul";
-            this.mul.Size = new System.Drawing.Size(85, 20);
-            this.mul.TabIndex = 2;
-            // 
-            // multButton
-            // 
-            this.multButton.Location = new System.Drawing.Point(8, 81);
-            this.multButton.Name = "multButton";
-            this.multButton.Size = new System.Drawing.Size(86, 35);
-            this.multButton.TabIndex = 3;
-            this.multButton.Text = "Умножить функцию";
-            this.multButton.UseVisualStyleBackColor = true;
-            this.multButton.Click += new System.EventHandler(this.multButton_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(6, 192);
@@ -281,6 +238,46 @@
             this.mul2.Name = "mul2";
             this.mul2.Size = new System.Drawing.Size(85, 20);
             this.mul2.TabIndex = 22;
+            this.mul2.Text = "1";
+            // 
+            // multButton
+            // 
+            this.multButton.Location = new System.Drawing.Point(8, 81);
+            this.multButton.Name = "multButton";
+            this.multButton.Size = new System.Drawing.Size(86, 35);
+            this.multButton.TabIndex = 3;
+            this.multButton.Text = "Умножить функцию";
+            this.multButton.UseVisualStyleBackColor = true;
+            this.multButton.Click += new System.EventHandler(this.multButton_Click);
+            // 
+            // mul
+            // 
+            this.mul.Location = new System.Drawing.Point(8, 55);
+            this.mul.Name = "mul";
+            this.mul.Size = new System.Drawing.Size(85, 20);
+            this.mul.TabIndex = 2;
+            this.mul.Text = "1";
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Location = new System.Drawing.Point(98, 19);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(348, 235);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 1;
+            this.PictureBox1.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Sin график",
+            "П_П_П график"});
+            this.listBox1.Location = new System.Drawing.Point(6, 19);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(86, 30);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -292,11 +289,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Status_label,
+            this.StatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 357);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(608, 22);
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // Status_label
+            // 
+            this.Status_label.Name = "Status_label";
+            this.Status_label.Size = new System.Drawing.Size(0, 17);
+            // 
+            // StatusLabel2
+            // 
+            this.StatusLabel2.Name = "StatusLabel2";
+            this.StatusLabel2.Size = new System.Drawing.Size(0, 17);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 379);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -310,7 +329,6 @@
             this.Controls.Add(this.trackBar);
             this.Controls.Add(this.readList);
             this.Controls.Add(this.unitsList);
-            this.Controls.Add(this.successLabel);
             this.Controls.Add(this.current_label);
             this.Controls.Add(this.currentBox);
             this.Controls.Add(this.currentButton);
@@ -322,6 +340,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +352,6 @@
         private System.Windows.Forms.Button currentButton;
         private System.Windows.Forms.TextBox currentBox;
         private System.Windows.Forms.Label current_label;
-        private System.Windows.Forms.Label successLabel;
         private System.Windows.Forms.ListBox unitsList;
         private System.Windows.Forms.ListBox readList;
         private System.Windows.Forms.TrackBar trackBar;
@@ -353,6 +372,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox mul2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel Status_label;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel2;
     }
 }
 
