@@ -54,6 +54,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Status_label = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -209,6 +210,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.mul2);
             this.groupBox1.Controls.Add(this.multButton);
@@ -310,6 +312,16 @@
             this.StatusLabel2.Name = "StatusLabel2";
             this.StatusLabel2.Size = new System.Drawing.Size(0, 17);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(8, 124);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 36);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "1/2";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +387,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel Status_label;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel2;
+        private System.Windows.Forms.Button button4;
     }
 }
 

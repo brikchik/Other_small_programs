@@ -209,5 +209,10 @@ namespace TDD
             do_paint();
             PictureBox1.Invalidate();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Status_label.Text = "" + sensors[0] / sensors[1];
+        }
     }
 }
