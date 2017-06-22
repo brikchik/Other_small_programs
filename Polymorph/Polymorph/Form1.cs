@@ -6,13 +6,14 @@ namespace Polymorph
 
     public abstract class temperatureIndicator
     {
+        protected bool error = false;
         protected int color;
         protected float brightness;
         protected float size;
         public abstract void setTemp(float t);
         public abstract float getTemp();
         public abstract int getColor();
-        public abstract void setColor();
+        public abstract void setColor(int col);
         public abstract float getBrightness();
         public abstract void setBrightness(float b);
         public abstract void setSize(float a, float b);
@@ -24,6 +25,7 @@ namespace Polymorph
         Graphics grBack;
         Panel panel;
         float temp=0;
+        
         public temp1(Panel p, Graphics c) { panel = p; grBack = c; }
         public override void setTemp(float t)
         {
@@ -31,12 +33,12 @@ namespace Polymorph
         }
         public override float getTemp() { return temp; }
         public override int getColor() { return 0; }
-        public override void setColor() { }
+        public override void setColor(int col) { color = col; }
         public override float getBrightness() { return 0; }
         public override void setBrightness(float a) { }
         public override void setSize(float a, float b) { }
         public override float getSize() { return 0; }
-
+        public bool this[int k]{ get { return true; } } //перегрузка индексатора вместо []
         public override void doPaint()
         {
             Bitmap btmBack = new Bitmap(348, 235);      //изображение
@@ -60,7 +62,7 @@ namespace Polymorph
         }
         public override float getTemp() { return temp; }
         public override int getColor() { return 0; }
-        public override void setColor() { }
+        public override void setColor(int col) { color = col; }
         public override float getBrightness() { return 0; }
         public override void setBrightness(float a) { }
         public override void setSize(float a, float b) { }
@@ -84,11 +86,13 @@ namespace Polymorph
         public temp3(Panel p, Graphics c) { panel = p; grBack = c; }
         public override void setTemp(float t)
         {
+            if (t > 40 || t < 0) error = true;
+            else
             temp = t;
         }
         public override float getTemp() { return temp; }
         public override int getColor() { return 0; }
-        public override void setColor() { }
+        public override void setColor(int col) { color = col; }
         public override float getBrightness() { return 0; }
         public override void setBrightness(float a) { }
         public override void setSize(float a, float b) { }
@@ -100,7 +104,7 @@ namespace Polymorph
             panel.BackgroundImage = btmBack;
             grBack.DrawRectangle(Pens.Black, 20, 20, 50, 200);
             grBack.FillRectangle(Brushes.Blue, 60, 200 - this.getTemp() * 4, 5, this.getTemp() * 4);
-            grBack.DrawString(this.getTemp()+"C", new Font(FontFamily.GenericSansSerif, 12), Brushes.Black, 80, 40);
+            grBack.DrawString(this.getTemp() + "C", new Font(FontFamily.GenericSansSerif, 12), Brushes.Black, 80, 40);
             grBack.DrawLine(Pens.Black, 60, 30, 60, 200);
             grBack.DrawLine(Pens.Black, 50, 200, 70, 200);
             grBack.DrawString("0", new Font(FontFamily.GenericSansSerif, 11), Brushes.Black, 40, 200);
