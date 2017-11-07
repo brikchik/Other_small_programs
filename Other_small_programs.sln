@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University_timetable", "University_timetable\University_timetable.csproj", "{52A5221A-9F7C-464F-A536-0133D21D1D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "Clock\Clock.csproj", "{5302A0C3-26C7-4CD3-87C6-9014981AB4D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossroads_model", "crossroads_model\Crossroads_model.csproj", "{824C68EC-E8F0-4C69-AD41-0C2A100C819F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pressure_indicator_graph", "Pressure_indicator_graph\Pressure_indicator_graph.csproj", "{E4288EA3-D3CD-472C-9D08-2437526D9A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speed_indicator_graph", "Speed_indicator_graph\Speed_indicator_graph.csproj", "{174233FB-3DF2-43B8-856C-5E306FB7CF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack_based_class", "Stack_based_class\Stack_based_class.csproj", "{6E7D53BF-54D8-4891-AAED-501C54783961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperature_indicator", "Temperature_indicator\Temperature_indicator.csproj", "{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A5221A-9F7C-464F-A536-0133D21D1D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A5221A-9F7C-464F-A536-0133D21D1D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A5221A-9F7C-464F-A536-0133D21D1D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A5221A-9F7C-464F-A536-0133D21D1D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5302A0C3-26C7-4CD3-87C6-9014981AB4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5302A0C3-26C7-4CD3-87C6-9014981AB4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5302A0C3-26C7-4CD3-87C6-9014981AB4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5302A0C3-26C7-4CD3-87C6-9014981AB4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824C68EC-E8F0-4C69-AD41-0C2A100C819F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824C68EC-E8F0-4C69-AD41-0C2A100C819F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824C68EC-E8F0-4C69-AD41-0C2A100C819F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824C68EC-E8F0-4C69-AD41-0C2A100C819F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4288EA3-D3CD-472C-9D08-2437526D9A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4288EA3-D3CD-472C-9D08-2437526D9A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4288EA3-D3CD-472C-9D08-2437526D9A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4288EA3-D3CD-472C-9D08-2437526D9A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174233FB-3DF2-43B8-856C-5E306FB7CF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174233FB-3DF2-43B8-856C-5E306FB7CF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174233FB-3DF2-43B8-856C-5E306FB7CF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174233FB-3DF2-43B8-856C-5E306FB7CF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7D53BF-54D8-4891-AAED-501C54783961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7D53BF-54D8-4891-AAED-501C54783961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7D53BF-54D8-4891-AAED-501C54783961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7D53BF-54D8-4891-AAED-501C54783961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
