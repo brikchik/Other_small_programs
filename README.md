@@ -24,5 +24,7 @@ pwd          //current path
 
 ls [PATH]          //current dir or dir with path=PATH
 
+strmsg [MESSAGE]      //set message shown in every line MESSAGE>
+
 other commands: will be sent to system shell, returns back after running outer command
 
