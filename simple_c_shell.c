@@ -8,9 +8,9 @@ char path[1024]; //current
 char cmd[256];
 char cmdempty[256];
 char* toks[10];
+char* startmsg="default";
 int parse(char* st, char** toks)
 {
-  for (int i=0;i<10;i++) toks[i] = "";
   char* tok = strtok(st," \t");
   int t = 0;
   while((tok != NULL) && (t < 10))
@@ -73,14 +73,26 @@ void ls(char* pathx)
 }
 int main()
 {
+  int mainproc=1;
   char* user;
   user=getenv("USER");
-  do{
+  char* startmessage="Hello, ";
+  write(1,startmessage,strlen(startmessage));
+  write(1,user,strlen(user));
+  startmessage="\nI can run echo,cd,ls,pwd,strmsg and call outer programs\n";
+  write(1,startmessage,strlen(startmessage));
+  toks[0]="";
+  while ((strcmp(toks[0],"exit") != 0)){
+    for (int i=0;i<10;i++) toks[i]="";
     for(int i=0;i<1024;i++)path[i]=0;
     getcwd(path,sizeof(path));
+    if ( strcmp(startmsg,"default") != 0 ) write(1,startmsg,strlen(startmsg));
+    else
+    {
     write(1,path,sizeof(path));
     write(1,"@",1);
     write(1,user,sizeof(user));
+    }
     write(1,">",1);
     int n = read(0,&cmd,256);
 	toks[0]="";
@@ -102,6 +114,14 @@ int main()
       pwd();
     }
     else
+    if (strcmp(toks[0],"strmsg") == 0)
+    {
+	char* warning="call with \"default\" to use basic \"path@user\" message\n";
+	write(1,warning,strlen(warning));
+	if(toks[1]!=NULL)startmsg=toks[1];
+		else write(1,"error\n",6);
+    }
+    else
     if (strcmp(toks[0],"ls") == 0)
     {
 	if ( sizeof(toks)>1) ls(toks[1]);
@@ -114,15 +134,15 @@ int main()
       {
         execvp(toks[0],toks);
         perror("Unknown command");
-        exit(1);
+	exit(1);
       }
       else if (p>0)
       {
-        continue;
+        wait(p);
+	write(1,"\n",1);
       }
     }
   }
-  }
-  while ((strcmp(toks[0],"exit") != 0));
+  };
   return 0;
 }
