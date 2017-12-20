@@ -10,6 +10,7 @@ char cmdempty[256];
 char* toks[10];
 int parse(char* st, char** toks)
 {
+  for (int i=0;i<10;i++) toks[i] = "";
   char* tok = strtok(st," \t");
   int t = 0;
   while((tok != NULL) && (t < 10))
