@@ -15,9 +15,14 @@ University_timetable - OOP oriented app without database. Stores info about less
 Crossroads_model - visual model of a crossroads with roadlights.
 Cars drive when they are allowed to
 
-Simple_c_shell - basic custom shell in C
-available commands:
+Simple_c_shell - basic custom shell in C.
+Available commands:
+
 cd PATH          //go to a new directory PATH
+
 pwd          //current path
+
 ls [PATH]          //current dir or dir with path=PATH
+
 other commands: will be sent to system shell, returns back after running outer command
+
