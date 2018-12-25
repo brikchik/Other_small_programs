@@ -66,4 +66,4 @@ use the MovementDetector class in your app
 
 Detects square markers. Marker has to have dark borders and bright center.
 
-Output example is given in result.png file. Sample markers are in MARKERS.png
+Output example is given in result.png file and result.txt (marker center coordinates). Sample markers are in MARKERS.png
