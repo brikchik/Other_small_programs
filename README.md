@@ -40,14 +40,30 @@ Movement detector (takes video stream)
 
 requirements:
 
-Python, OpenCV
+Python, OpenCV, NumPy
 
 usage:
 
-Movement_detector.py                            capture video from camera, detect movement with static or slightly moving background
+Movement_detector.py             =               capture video from camera, detect movement with static or slightly moving background
 
-Movement_detector.py videofile.mp4              detect movement in video file 
+Movement_detector.py videofile.mp4       =       detect movement in video file 
 
 DIVIDER constant sets the min required moving object size share (DIVIDER=5 -> 20% of image has to move)
 
 alarms when something is moving; writes log; counts the length of movement is seconds and frames; detects large moving objects 
+
+---------------------------------------------------------------
+MarkerDetector
+
+requirements:
+
+Python, OpenCV, NumPy
+
+usage: 
+set parameters and run
+OR
+use the MovementDetector class in your app
+
+Detects square markers. Marker has to have dark borders and bright center.
+
+Output example is given in result.png file. Sample markers are in MARKERS.png
