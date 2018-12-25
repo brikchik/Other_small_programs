@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University_timetable", "University_timetable\University_timetable.csproj", "{52A5221A-9F7C-464F-A536-0133D21D1D2D}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack_based_class", "Stack_based_class\Stack_based_class.csproj", "{6E7D53BF-54D8-4891-AAED-501C54783961}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperature_indicator", "Temperature_indicator\Temperature_indicator.csproj", "{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Movement detector", "Movement detector\Movement detector.pyproj", "{9E9625BC-CED5-412D-A858-1720344712B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +53,13 @@ Global
 		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1BB8582-BBC8-4E1B-BCB5-31AB83F2EE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9625BC-CED5-412D-A858-1720344712B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9625BC-CED5-412D-A858-1720344712B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55F7B149-3AE1-4487-B6D9-8D9A43F2913A}
 	EndGlobalSection
 EndGlobal
